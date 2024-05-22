@@ -10,10 +10,10 @@
         /* Estilos básicos para el contenedor y el iframe */
         .iframe-container {
             position: relative;
+            width: 100%;
             padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
             height: 0;
             overflow: hidden;
-            max-width: 100%;
             background: #fff;
         }
         .iframe-container iframe {
@@ -32,7 +32,7 @@
             <div class="logo">
                 <img src="https://srv.latostadora.com/designall.dll/goku_padel_ball--i:14138526822451413851;d:2682245;w:520;b:000000;m:1.jpg" alt="Logo de la empresa">
             </div>
-            <h1>Test - PÁDEL, CERVEZAS Y ESTADÍSTICAS</h1>
+            <h1>Test.2 - PÁDEL, CERVEZAS Y ESTADÍSTICAS</h1>
             <nav>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -54,19 +54,5 @@
             <p>&copy; 2024 Mi Empresa | Todos los derechos reservados</p>
         </div>
     </footer>
-
-    <script>
-        // Ajustar el iframe cuando se redimensiona la ventana
-        function adjustIframe() {
-            var iframe = document.querySelector('iframe');
-            if (window.innerWidth <= 768) { // Tamaño para móviles
-                iframe.style.height = 'calc(100vh - 160px)'; // Ajusta el alto para dispositivos móviles
-            } else {
-                iframe.style.height = 'calc(100vh - 160px)'; // Ajusta el alto para otros dispositivos
-            }
-        }
-        window.addEventListener('resize', adjustIframe);
-        adjustIframe(); // Llama a la función al cargar la página
-    </script>
 </body>
 </html>

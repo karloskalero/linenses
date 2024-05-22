@@ -65,9 +65,9 @@ nav ul li a:focus {
   padding: 20px;
 }
 
-iframe {
+.iframe-container iframe {
   width: 100%;
-  height: calc(100vh - 160px); /* Resta el alto del header y el footer */
+  height: 100%;
   border: none;
 }
 
