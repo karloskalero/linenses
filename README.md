@@ -1,2 +1,4 @@
 # linenses
-la prueba definitiva para enlazar linenses con Github Pages
+La prueba definitiva para enlazar linenses.com con Github Pages
+
+Actualmente hay un dashboard de Power BI
