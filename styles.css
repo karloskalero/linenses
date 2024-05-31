@@ -22,6 +22,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
 }
 
 header {
@@ -32,6 +33,12 @@ header {
 
 .logo img {
   max-width: 100px;
+  height: auto; /* Asegura que el logo mantenga su proporción */
+}
+
+h1 {
+  font-size: 1.5em; /* Tamaño de fuente adaptable */
+  margin-left: 10px; /* Espacio entre el logo y el título */
 }
 
 nav ul {
@@ -76,4 +83,33 @@ footer {
   color: #fff;
   padding: 10px 0;
   text-align: center;
+}
+
+/* Media queries para hacer el header responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo img {
+    max-width: 60px; /* Reduce el tamaño del logo en pantallas pequeñas */
+  }
+  
+  h1 {
+    font-size: 1.2em;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  
+  nav ul {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
 }
