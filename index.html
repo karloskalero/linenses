@@ -3,70 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PÁDEL, CERVEZAS Y ESTADÍSTICAS - Un sitio web sobre pádel, cervezas y estadísticas.">
-    <title>Página Web con Power BI</title>
+    <title>NEW PÁDEL</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Estilos básicos para el contenedor y el iframe */
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-            height: 0;
-            overflow: hidden;
-            background: #fff;
-        }
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+    <link rel="preload" href="WindsorBT-LightCondensed.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="https://linenses.com/Img/logo_no_background.png" alt="Logo de la empresa"> <!-- Usa la URL correcta -->
-            </div>
-            <h1>PÁDEL, CERVEZAS Y ESTADÍSTICAS</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="acerca.html">Acerca de</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html"    class="active">     Home</a></li>
+                <li><a href="deportistas.html">                 Deportistas</a></li>
+                <li><a href="estadisticas.html">                Estadísticas</a></li>
+                <li><a href="XXX.html">                         XXX</a></li>
+                <li><a href="ZZZ.html">                         ZZZ</a></li>
+            </ul>
+        </nav>
     </header>
-    
     <main>
-        <div class="iframe-container">
-            <iframe title="DASHBOARD" src="https://app.powerbi.com/view?r=eyJrIjoiYTc0NDk1Y2QtMjNmOC00MTFkLWJiYmUtZWJlZTBlMGE3ZGU1IiwidCI6ImM2MzRhOTRiLTU5NWEtNGUwZi04ODc5LWY1MzUxZTZkZWU5NCIsImMiOjl9" allowFullScreen="true"></iframe>
-        </div>
+        <section id="home">
+            <h1>linenses.com</h1>
+            <p>Bienvenidos a linenses.com. Un simpático grupo de amigos juegan todos los Jueves al pádel en la preciosa ciudad de <b>La Línea de la Concepción</b><br><br> ¿Quieres conocer sus aventuras?.</p>
+        </section>
     </main>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Mi Empresa | Todos los derechos reservados</p>
-        </div>
-    </footer>
-
-    <script>
-        // Ajustar el iframe cuando se redimensiona la ventana
-        function adjustIframe() {
-            var iframe = document.querySelector('iframe');
-            if (window.innerWidth <= 768) { // Tamaño para móviles
-                iframe.style.height = '100vh'; // Ajusta el alto para dispositivos móviles
-            } else {
-                iframe.style.height = 'calc(100vh - 160px)'; // Ajusta el alto para otros dispositivos
-            }
-        }
-        window.addEventListener('resize', adjustIframe);
-        adjustIframe(); // Llama a la función al cargar la página
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
