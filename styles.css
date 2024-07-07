@@ -87,18 +87,25 @@ main {
     padding: 0px;
 }
 
+#estadisticas {
+    height: 100%;
+    margin: 0;
+}
+
 .empresa-buttons {
     display: flex;
+    flex-wrap: wrap; 
     justify-content: space-around;
     margin-top: 10px;
     margin-bottom: 25px;
+    gap: 20px;
 }
 
 .empresa-button {
     background-color: white;  
     border: 2px solid white;
     border-radius: 50%;
-    width: 50px;
+    width: 50px; /* Ajusta el ancho de los botones */
     height: 50px;
     cursor: pointer;
     display: flex;
@@ -106,6 +113,8 @@ main {
     align-items: center;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px; /* Añadir espacio vertical entre las filas */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
 }
 
 .empresa-button img {
@@ -122,6 +131,7 @@ main {
 .empresa-info {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
+    padding-right: 50%;
     border-radius: 10px;
 }
 
@@ -159,20 +169,7 @@ main {
     }
 }
 
-/* Estilos para el iframe */
-.iframe-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .iframe-container iframe {
-    width: 100%;
-    height: calc(100vh - 160px);
-    border: none;
-  }
+
 
 
   
@@ -181,22 +178,31 @@ main {
 .empresa-info img {
     display: block;
     position: fixed;
-    bottom: -150px; /* Fuera de la pantalla al inicio */
-    left: 50%;
-    transform: translateX(-50%);
+    right: -240px; /* Fuera de la pantalla al inicio */
+    top: 65%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Centrar verticalmente con respecto al centro de la imagen */
     width: 240px; /* Puedes ajustar el tamaño según tus necesidades */
     height: auto;
-    transition: bottom 0.5s ease, opacity 0.5s ease;
+    transition: right 0.5s ease, opacity 0.5s ease;
     opacity: 0; /* Inicialmente transparente */
 }
 
 .empresa-info img.active {
-    bottom: 20px; /* Subir a la posición visible */
+    right: -25px; /* Subir a la posición visible */
     opacity: 0.9; /* Hacer visible */
 }
 
 
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
 
+.image-container img {
+    max-width: 65%;
+    max-height: 65%;
+
+}
 
 
 
